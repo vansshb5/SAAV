@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FloatingLines from "./FloatingLines";
-
+import Testimonials from "./Testimonials";
+import About from "./About";
 const slides = [
   {
     title: "Transforming Businesses with Technology",
@@ -27,7 +28,7 @@ const Home = () => {
     return () => clearInterval(timer);
   }, []);
 
-  return (
+  return (<>
     <section
       id="home"
       className="relative min-h-screen overflow-hidden bg-[#020617]"
@@ -85,9 +86,9 @@ const Home = () => {
                     Get Started
                   </button>
 
-                  <button className="px-6 py-3 border border-slate-400 text-white rounded hover:bg-white hover:text-black transition">
+                <a href="/contact"><button className="px-6 py-3 border border-slate-400 text-white rounded hover:bg-white hover:text-black transition">
                     Contact Us
-                  </button>
+                  </button></a>  
                 </div>
               </div>
             ))}
@@ -124,6 +125,9 @@ const Home = () => {
         ))}
       </div>
     </section>
+    <About compact/>
+    <Testimonials compact/>
+    </>
   );
 };
 

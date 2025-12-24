@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,10 +18,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", to: "/" },
+    { label: "Services", to: "/services" },
+    { label: "Projects", to: "/projects" },
+    
+    { label: "Contact", to: "/contact" },
   ];
 
   return (
@@ -35,28 +37,40 @@ const Navbar = () => {
       `}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        
+
         {/* LOGO */}
-        <a
-          href="#home"
+        <NavLink
+          to="/"
           className="text-2xl font-semibold tracking-wide text-white transition hover:opacity-80"
+          onClick={() => setIsOpen(false)}
         >
           SAAV
-        </a>
+        </NavLink>
 
         {/* DESKTOP NAV */}
         <ul className="hidden md:flex items-center gap-12 text-base lg:text-lg font-medium text-slate-200">
           {navLinks.map((link) => (
             <li key={link.label} className="relative group">
-              <a
-                href={link.href}
-                className="transition-colors duration-300 group-hover:text-white"
+              <NavLink
+                to={link.to}
+                className={({ isActive }) =>
+                  `transition-colors duration-300 ${
+                    isActive ? "text-white" : "text-slate-300"
+                  } group-hover:text-white`
+                }
               >
                 {link.label}
-              </a>
+              </NavLink>
 
               {/* underline animation */}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-secondary transition-all duration-300 group-hover:w-full" />
+              <span
+                className="
+                  absolute -bottom-1 left-0 h-[2px]
+                  bg-secondary
+                  transition-all duration-300
+                  w-0 group-hover:w-full
+                "
+              />
             </li>
           ))}
         </ul>
@@ -77,13 +91,17 @@ const Navbar = () => {
           <ul className="flex flex-col gap-6 text-white text-lg font-medium mt-4">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a
-                  href={link.href}
+                <NavLink
+                  to={link.to}
                   onClick={() => setIsOpen(false)}
-                  className="block transition hover:text-secondary"
+                  className={({ isActive }) =>
+                    `block transition ${
+                      isActive ? "text-secondary" : "text-white"
+                    }`
+                  }
                 >
                   {link.label}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>

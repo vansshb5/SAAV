@@ -49,7 +49,7 @@ const PrinciplesSwitcher = () => {
   const [activeId, setActiveId] = useState(principles[0].id);
   const refs = useRef({});
 
-  // 🔹 Scroll observer to auto-highlight titles
+  // Desktop scroll observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -66,66 +66,93 @@ const PrinciplesSwitcher = () => {
     );
 
     Object.values(refs.current).forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="grid md:grid-cols-2 gap-24">
-
-      {/* LEFT — STICKY TITLES */}
-      <div className="sticky top-32 h-fit">
-        <h2 className="text-2xl font-semibold text-white mb-10">
+    <>
+      {/* ================= MOBILE VIEW ================= */}
+      <div className="md:hidden space-y-16">
+        <h2 className="text-2xl font-semibold text-white">
           Our Principles
         </h2>
 
-        <ul className="space-y-6">
-          {principles.map((item) => (
-            <li
-              key={item.id}
-              onClick={() => {
-                const target = document.getElementById(item.id);
-                target?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                });
-              }}
-              className={`
-                cursor-pointer
-                text-3xl md:text-4xl lg:text-5xl
-                font-semibold
-                leading-tight
-                transition-all duration-300
-                ${
-                  activeId === item.id
-                    ? "bg-gradient-to-r from-red-900 via-red-700 to-red-500 bg-clip-text text-transparent"
-                    : "text-slate-400 hover:text-slate-300"
-                }
-              `}
+        {principles.map((item) => (
+          <div key={item.id} className="space-y-4">
+            <h3
+              className="
+                text-2xl font-semibold
+                bg-gradient-to-r from-red-900 via-red-700 to-red-500
+                bg-clip-text text-transparent
+              "
             >
               {item.title}
-            </li>
-          ))}
-        </ul>
-      </div>
+            </h3>
 
-      {/* RIGHT — SCROLLING CONTENT */}
-      <div className="space-y-40">
-        {principles.map((item) => (
-          <div
-            key={item.id}
-            id={item.id}
-            ref={(el) => (refs.current[item.id] = el)}
-            className="max-w-xl scroll-mt-32"
-          >
-            <p className="text-lg leading-relaxed text-slate-400">
+            <p className="text-base leading-relaxed text-slate-400">
               {item.description}
             </p>
           </div>
         ))}
       </div>
 
-    </div>
+      {/* ================= DESKTOP VIEW ================= */}
+      <div className="hidden md:grid md:grid-cols-2 gap-24">
+
+        {/* LEFT — STICKY TITLES */}
+        <div className="sticky top-32 h-fit">
+          <h2 className="text-2xl font-semibold text-white mb-10">
+            Our Principles
+          </h2>
+
+          <ul className="space-y-6">
+            {principles.map((item) => (
+              <li
+                key={item.id}
+                onClick={() => {
+                  const target = document.getElementById(item.id);
+                  target?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }}
+                className={`
+                  cursor-pointer
+                  text-3xl lg:text-5xl
+                  font-semibold
+                  leading-tight
+                  transition-all duration-300
+                  ${
+                    activeId === item.id
+                      ? "bg-gradient-to-r from-red-900 via-red-700 to-red-500 bg-clip-text text-transparent"
+                      : "text-slate-400 hover:text-slate-300"
+                  }
+                `}
+              >
+                {item.title}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* RIGHT — SCROLLING CONTENT */}
+        <div className="space-y-40">
+          {principles.map((item) => (
+            <div
+              key={item.id}
+              id={item.id}
+              ref={(el) => (refs.current[item.id] = el)}
+              className="max-w-xl scroll-mt-32"
+            >
+              <p className="text-lg leading-relaxed text-slate-400">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </>
   );
 };
 
