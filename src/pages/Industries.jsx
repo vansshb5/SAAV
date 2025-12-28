@@ -51,15 +51,15 @@ const Industries = () => {
   const activeIndustry = industries[activeIndex];
 
   return (
-    <main className="pt-32 pb-24 bg-gradient-to-b from-[#020617] via-[#0b1220] to-[#0f172a] text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <main className="pt-28 md:pt-32 pb-24 bg-gradient-to-b from-[#020617] via-[#0b1220] to-[#0f172a] text-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* PAGE INTRO */}
-        <section className="max-w-4xl mb-20">
-          <h1 className="text-4xl md:text-5xl font-semibold mb-6">
+        <section className="max-w-4xl mb-16 md:mb-20">
+          <h1 className="text-3xl md:text-5xl font-semibold mb-6">
             Industries & Technology Domains
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-base md:text-lg text-slate-300 leading-relaxed">
             SAAV works across AI and IT-driven domains, delivering technology
             solutions in areas such as artificial intelligence, cloud
             infrastructure, data platforms, and enterprise systems.
@@ -67,21 +67,28 @@ const Industries = () => {
         </section>
 
         {/* INDUSTRY SELECTOR */}
-        <section className="grid md:grid-cols-2 gap-12 items-start">
+        <section className="grid md:grid-cols-2 gap-10 md:gap-12 items-start">
 
-          {/* LEFT LIST */}
-          <ul className="space-y-4">
+          {/* MOBILE + DESKTOP LIST */}
+          <ul
+            className="
+              flex md:block
+              gap-3 md:gap-4
+              overflow-x-auto md:overflow-visible
+              pb-2 md:pb-0
+              -mx-4 px-4 md:mx-0 md:px-0
+            "
+          >
             {industries.map((industry, index) => (
-              <li key={industry.title}>
+              <li key={industry.title} className="min-w-[240px] md:min-w-0">
                 <button
                   onClick={() => setActiveIndex(index)}
-                  className={`w-full text-left px-5 py-4 rounded-md border
+                  className={`w-full text-left px-4 py-3 md:px-5 md:py-4 rounded-md border
                     transition-all duration-300 ease-out
-                    transform
                     ${
                       activeIndex === index
-                        ? "bg-white/5 border-white/30 text-white scale-[1.04] shadow-lg"
-                        : "text-slate-300 border-transparent hover:bg-white/5 hover:text-white hover:scale-[1.03] hover:border-white/20 hover:shadow-md"
+                        ? "bg-white/5 border-white/30 text-white md:scale-[1.04] shadow-lg"
+                        : "text-slate-300 border-transparent hover:bg-white/5 hover:text-white md:hover:scale-[1.03] hover:border-white/20 hover:shadow-md"
                     }
                   `}
                 >
@@ -91,20 +98,20 @@ const Industries = () => {
             ))}
           </ul>
 
-          {/* RIGHT CONTENT */}
-          <div className="bg-white/[0.03] border border-white/10 rounded-lg p-8 min-h-[340px] transition-all duration-300">
-            <div className="mb-6 overflow-hidden rounded-md">
+          {/* CONTENT */}
+          <div className="bg-white/[0.03] border border-white/10 rounded-lg p-6 md:p-8 min-h-[320px] transition-all duration-300">
+            <div className="mb-5 overflow-hidden rounded-md">
               <img
                 src={activeIndustry.image}
                 alt={activeIndustry.title}
-                className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-40 md:h-48 object-cover transition-transform duration-500"
               />
             </div>
 
-            <h2 className="text-2xl font-medium mb-4">
+            <h2 className="text-xl md:text-2xl font-medium mb-4">
               {activeIndustry.title}
             </h2>
-            <p className="text-slate-300 leading-relaxed">
+            <p className="text-slate-300 text-sm md:text-base leading-relaxed">
               {activeIndustry.description}
             </p>
           </div>
