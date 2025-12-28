@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import HeroSlider from "../components/HeroSlider";
 
+import whatAI from "../assets/home/what-ai.png";
+import whatCloud from "../assets/home/what-cloud.png";
+import whatData from "../assets/home/what-data.png";
+import peopleImg from "../assets/home/people.png";
+
 const Home = () => {
   return (
-    
     <main className="bg-gradient-to-b from-[#020617] via-[#0b1220] to-[#0f172a] text-white">
-<HeroSlider />
 
-      {/* HERO */}
+      <HeroSlider />
+
+      {/* HERO TEXT */}
       <section className="pt-40 pb-32">
         <div className="max-w-7xl mx-auto px-6 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-8">
@@ -48,35 +53,56 @@ const Home = () => {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-8">
-              <h3 className="text-xl font-medium mb-3">
-                AI & Intelligent Systems
-              </h3>
-              <p className="text-slate-300 leading-relaxed">
-                We design and implement artificial intelligence and machine
-                learning systems that integrate into applications, platforms,
-                and workflows.
-              </p>
+            <div className="bg-white/[0.03] border border-white/10 rounded-xl overflow-hidden">
+              <img
+                src={whatAI}
+                alt="AI Systems"
+                className="h-44 w-full object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-xl font-medium mb-3">
+                  AI & Intelligent Systems
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  We design and implement artificial intelligence and machine
+                  learning systems that integrate into applications, platforms,
+                  and workflows.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-8">
-              <h3 className="text-xl font-medium mb-3">
-                Cloud & IT Platforms
-              </h3>
-              <p className="text-slate-300 leading-relaxed">
-                We build cloud-based and enterprise IT platforms that support
-                scalability, security, and reliable digital operations.
-              </p>
+            <div className="bg-white/[0.03] border border-white/10 rounded-xl overflow-hidden">
+              <img
+                src={whatCloud}
+                alt="Cloud Platforms"
+                className="h-44 w-full object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-xl font-medium mb-3">
+                  Cloud & IT Platforms
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  We build cloud-based and enterprise IT platforms that support
+                  scalability, security, and reliable digital operations.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-8">
-              <h3 className="text-xl font-medium mb-3">
-                Data & Software Systems
-              </h3>
-              <p className="text-slate-300 leading-relaxed">
-                We develop data platforms and software systems that enable
-                analytics, automation, and modern digital services.
-              </p>
+            <div className="bg-white/[0.03] border border-white/10 rounded-xl overflow-hidden">
+              <img
+                src={whatData}
+                alt="Data Systems"
+                className="h-44 w-full object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-xl font-medium mb-3">
+                  Data & Software Systems
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  We develop data platforms and software systems that enable
+                  analytics, automation, and modern digital services.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -122,17 +148,24 @@ const Home = () => {
 
       {/* PEOPLE & OPPORTUNITIES */}
       <section className="pb-32">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            Opportunities for People in IT & AI
-          </h2>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            We believe in creating opportunities for people interested in IT and
-            artificial intelligence. Our teams work on real projects involving
-            cloud platforms, AI systems, data engineering, and enterprise
-            software—helping individuals build skills and experience in modern
-            technology environments.
-          </p>
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+              Opportunities for People in IT & AI
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              We believe in creating opportunities for people interested in IT
+              and artificial intelligence. Our teams work on real projects
+              involving cloud platforms, AI systems, data engineering, and
+              enterprise software.
+            </p>
+          </div>
+
+          <img
+            src={peopleImg}
+            alt="People working in IT and AI"
+            className="rounded-xl border border-white/10"
+          />
         </div>
       </section>
 

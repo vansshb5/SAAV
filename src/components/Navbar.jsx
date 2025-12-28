@@ -56,7 +56,7 @@ const Navbar = () => {
             setServicesOpen(false);
           }}
         >
-          SAAV
+          SAAV.
         </NavLink>
 
         {/* DESKTOP NAV */}

@@ -1,25 +1,38 @@
+import heroImg from "../assets/company/hero.png";
+import techImg from "../assets/company/tech.png";
+import peopleImg from "../assets/company/people.png";
+import officeImg from "../assets/company/office.png";
+
 const OurCompany = () => {
   return (
     <main className="pt-32 pb-24 bg-gradient-to-b from-[#020617] via-[#0b1220] to-[#0f172a] text-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HERO / INTRO */}
-        <section className="max-w-4xl mb-28">
-          <p className="uppercase tracking-widest text-slate-400 mb-4">
-            Our Company
-          </p>
-          <h1 className="text-4xl md:text-6xl font-semibold mb-8 leading-tight">
-            IT & AI Solutions for
-            <span className="block text-white">
-              Modern Digital Environments
-            </span>
-          </h1>
-          <p className="text-xl text-slate-300 leading-relaxed">
-            SAAV is an IT and AI-focused technology company building intelligent
-            systems, platforms, and applications. We work across cloud, data,
-            artificial intelligence, and enterprise software to support modern
-            digital operations and innovation.
-          </p>
+        <section className="grid md:grid-cols-2 gap-16 items-center mb-28">
+          <div>
+            <p className="uppercase tracking-widest text-slate-400 mb-4">
+              Our Company
+            </p>
+            <h1 className="text-4xl md:text-6xl font-semibold mb-8 leading-tight">
+              IT & AI Solutions for
+              <span className="block text-white">
+                Modern Digital Environments
+              </span>
+            </h1>
+            <p className="text-xl text-slate-300 leading-relaxed">
+              SAAV is an IT and AI-focused technology company building intelligent
+              systems, platforms, and applications. We work across cloud, data,
+              artificial intelligence, and enterprise software to support modern
+              digital operations and innovation.
+            </p>
+          </div>
+
+          <img
+            src={heroImg}
+            alt="IT and AI systems"
+            className="rounded-xl border border-white/10"
+          />
         </section>
 
         {/* VALUE STRIP */}
@@ -56,7 +69,7 @@ const OurCompany = () => {
         </section>
 
         {/* WHO WE ARE / HOW WE WORK */}
-        <section className="grid md:grid-cols-2 gap-16 mb-32">
+        <section className="grid md:grid-cols-2 gap-16 items-center mb-32">
           <div>
             <h2 className="text-3xl font-medium mb-6">
               Who We Are
@@ -69,17 +82,11 @@ const OurCompany = () => {
             </p>
           </div>
 
-          <div className="relative bg-white/[0.03] border border-white/10 rounded-xl p-8">
-            <h2 className="text-3xl font-medium mb-6">
-              How We Work
-            </h2>
-            <p className="text-slate-300 leading-relaxed text-lg">
-              We work closely with teams and stakeholders to design, develop,
-              and deploy IT and AI solutions. Our approach emphasizes clarity,
-              collaboration, and continuous improvement throughout the
-              development lifecycle.
-            </p>
-          </div>
+          <img
+            src={techImg}
+            alt="Technology and systems"
+            className="rounded-xl border border-white/10"
+          />
         </section>
 
         {/* PRINCIPLES */}
@@ -122,29 +129,45 @@ const OurCompany = () => {
         </section>
 
         {/* PEOPLE */}
-        <section className="mb-32 max-w-4xl">
-          <h2 className="text-3xl font-medium mb-6">
-            Our People
-          </h2>
-          <p className="text-slate-300 leading-relaxed text-lg">
-            Our people are at the center of everything we do. We bring together
-            individuals interested in IT and AI, providing opportunities to
-            work on meaningful projects, gain hands-on experience, and grow
-            within a collaborative technology-driven environment.
-          </p>
+        <section className="grid md:grid-cols-2 gap-16 items-center mb-32">
+          <div>
+            <h2 className="text-3xl font-medium mb-6">
+              Our People
+            </h2>
+            <p className="text-slate-300 leading-relaxed text-lg">
+              Our people are at the center of everything we do. We bring together
+              individuals interested in IT and AI, providing opportunities to
+              work on meaningful projects, gain hands-on experience, and grow
+              within a collaborative technology-driven environment.
+            </p>
+          </div>
+
+          <img
+            src={peopleImg}
+            alt="People working in IT and AI"
+            className="rounded-xl border border-white/10"
+          />
         </section>
 
         {/* OFFICES */}
-        <section className="max-w-4xl">
-          <h2 className="text-3xl font-medium mb-6">
-            Our Presence
-          </h2>
-          <p className="text-slate-300 leading-relaxed text-lg">
-            SAAV operates with a flexible working model, supporting collaboration
-            across locations. Our teams work remotely and in shared spaces,
-            enabling access to opportunities and projects regardless of
-            geography.
-          </p>
+        <section className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl font-medium mb-6">
+              Our Presence
+            </h2>
+            <p className="text-slate-300 leading-relaxed text-lg">
+              SAAV operates with a flexible working model, supporting collaboration
+              across locations. Our teams work remotely and in shared spaces,
+              enabling access to opportunities and projects regardless of
+              geography.
+            </p>
+          </div>
+
+          <img
+            src={officeImg}
+            alt="Office and remote collaboration"
+            className="rounded-xl border border-white/10"
+          />
         </section>
 
       </div>

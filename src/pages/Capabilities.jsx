@@ -1,8 +1,13 @@
+import infraImg from "../assets/capabilities/infrastructure.png";
+import dataImg from "../assets/capabilities/data.png";
+import opsImg from "../assets/capabilities/operations.png";
+
 const capabilityGroups = [
   {
     title: "IT Infrastructure & Cloud",
     description:
       "Designing, building, and operating scalable IT infrastructure across on-prem, hybrid, and cloud environments to support enterprise workloads and critical systems.",
+    image: infraImg,
     items: [
       "Cloud Architecture & Migration",
       "Hybrid & On-Prem Infrastructure",
@@ -14,6 +19,7 @@ const capabilityGroups = [
     title: "Data, Platforms & Applications",
     description:
       "Developing and modernizing data platforms and enterprise applications to enable reliable operations, analytics, and digital workflows.",
+    image: dataImg,
     items: [
       "Data Platforms & Analytics",
       "Application Modernization",
@@ -25,6 +31,7 @@ const capabilityGroups = [
     title: "Enterprise IT Delivery & Operations",
     description:
       "Providing structured delivery, governance, and operational support to ensure enterprise IT initiatives are executed reliably and sustained over time.",
+    image: opsImg,
     items: [
       "Program & IT Delivery Management",
       "IT Operations & Support Models",
@@ -57,26 +64,35 @@ const Capabilities = () => {
           {capabilityGroups.map((group) => (
             <div
               key={group.title}
-              className="bg-white/[0.03] border border-white/10 rounded-lg p-8"
+              className="bg-white/[0.03] border border-white/10 rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
             >
-              <h2 className="text-2xl font-medium mb-4">
-                {group.title}
-              </h2>
+              {/* IMAGE */}
+              <img
+                src={group.image}
+                alt={group.title}
+                className="w-full h-44 object-cover"
+              />
 
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                {group.description}
-              </p>
+              <div className="p-8">
+                <h2 className="text-2xl font-medium mb-4">
+                  {group.title}
+                </h2>
 
-              <ul className="space-y-3">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="text-slate-300"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  {group.description}
+                </p>
+
+                <ul className="space-y-3">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="text-slate-300"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </section>

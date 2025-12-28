@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import heroAI from "../assets/hero-ai.png";
-import heroCloud from "../assets/hero-cloud.png";
-import heroPeople from "../assets/hero-people.png";
+import heroAI from "../assets/home/hero-ai.png";
+import heroCloud from "../assets/home/hero-cloud.png";
+import heroPeople from "../assets/home/hero-people.png";
 
 const slides = [
   {
