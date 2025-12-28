@@ -26,16 +26,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* LEGAL */}
-        <div>
-          <h3 className="text-white font-medium mb-4 text-sm uppercase tracking-wide">
-            Legal
-          </h3>
-          <ul className="space-y-3 text-sm">
-            <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-white transition">Terms of Service</a></li>
-          </ul>
-        </div>
+     
       </div>
 
       {/* BOTTOM BAR */}

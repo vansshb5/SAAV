@@ -1,5 +1,5 @@
 import useScrollReveal from "../hooks/useScrollReveal";
-import PrinciplesSwitcher from "../components/PrinciplesSwitcher";
+
 
 const About = () => {
   // 🔹 Hooks MUST be here
@@ -66,7 +66,6 @@ const About = () => {
      <div className="mb-28">
   
 
-  <PrinciplesSwitcher />
 </div>
 
         {/* APPROACH */}

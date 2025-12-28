@@ -1,133 +1,163 @@
-import { useEffect, useState } from "react";
-import FloatingLines from "./FloatingLines";
-import Testimonials from "./Testimonials";
-import About from "./About";
-const slides = [
-  {
-    title: "Transforming Businesses with Technology",
-    subtitle: "From Strategy to Execution",
-  },
-  {
-    title: "Building Modern Digital Solutions",
-    subtitle: "Cloud • Data • Engineering • Innovation",
-  },
-  {
-    title: "Enterprise Technology Consulting",
-    subtitle: "Scalable, Secure, Reliable Systems",
-  },
-];
+import { Link } from "react-router-dom";
+import HeroSlider from "../components/HeroSlider";
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
+  return (
+    
+    <main className="bg-gradient-to-b from-[#020617] via-[#0b1220] to-[#0f172a] text-white">
+<HeroSlider />
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000); // slower = premium feel
+      {/* HERO */}
+      <section className="pt-40 pb-32">
+        <div className="max-w-7xl mx-auto px-6 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-8">
+            Building IT & AI Solutions for
+            <span className="block">
+              Modern Digital Systems
+            </span>
+          </h1>
+          <p className="text-xl text-slate-300 leading-relaxed mb-12">
+            SAAV is an IT and AI-focused technology company working across cloud,
+            data, artificial intelligence, and enterprise software. We build
+            intelligent systems and create opportunities for people to work on
+            real-world technology projects.
+          </p>
 
-    return () => clearInterval(timer);
-  }, []);
-
-  return (<>
-    <section
-      id="home"
-      className="relative min-h-screen overflow-hidden bg-[#020617]"
-    >
-      {/* Floating Background */}
-      <div className="absolute inset-0 z-0">
-        <FloatingLines
-          enabledWaves={["top", "middle", "bottom"]}
-          lineDistance={[8, 6, 4]}
-          bendRadius={5}
-          bendStrength={-0.5}
-          interactive
-          parallax
-        />
-      </div>
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-transparent z-10" />
-
-      {/* SLIDER */}
-      <div className="relative z-20 min-h-screen flex items-center justify-center px-6 pt-24">
-        <div className="w-full max-w-5xl overflow-hidden">
-          <div
-            className="flex transition-transform duration-1000 ease-in-out"
-            style={{
-              transform: `translateX(-${current * 100}%)`,
-            }}
-          >
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className="min-w-full flex flex-col items-center text-center"
-              >
-             <h1 className="
-  text-4xl md:text-6xl lg:text-7xl
-  font-semibold
-  text-white
-  leading-tight
-  mb-6
-  text-shadow-strong
-">
-  {slide.title}
-</h1>
-
-<p className="
-  text-base md:text-lg
-  text-white/80
-  text-shadow-soft
-">
-  {slide.subtitle}
-</p>
-
-                <div className="mt-10 flex justify-center gap-4">
-                  <button className="px-6 py-3 bg-secondary text-black font-semibold rounded hover:opacity-90 transition">
-                    Get Started
-                  </button>
-
-                <a href="/contact"><button className="px-6 py-3 border border-slate-400 text-white rounded hover:bg-white hover:text-black transition">
-                    Contact Us
-                  </button></a>  
-                </div>
-              </div>
-            ))}
+          <div className="flex flex-wrap gap-6">
+            <Link
+              to="/industries"
+              className="px-6 py-3 bg-white text-black rounded-md font-medium hover:opacity-90 transition"
+            >
+              Explore Industries
+            </Link>
+            <Link
+              to="/capabilities"
+              className="px-6 py-3 border border-white/20 rounded-md font-medium hover:bg-white/10 transition"
+            >
+              View Capabilities
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* NAVIGATION */}
-      <button
-        onClick={() =>
-          setCurrent(current === 0 ? slides.length - 1 : current - 1)
-        }
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-30 text-white text-3xl hover:text-secondary transition"
-      >
-        ❮
-      </button>
+      {/* WHAT WE DO */}
+      <section className="pb-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-16 max-w-3xl">
+            What We Do
+          </h2>
 
-      <button
-        onClick={() => setCurrent((current + 1) % slides.length)}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-30 text-white text-3xl hover:text-secondary transition"
-      >
-        ❯
-      </button>
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-8">
+              <h3 className="text-xl font-medium mb-3">
+                AI & Intelligent Systems
+              </h3>
+              <p className="text-slate-300 leading-relaxed">
+                We design and implement artificial intelligence and machine
+                learning systems that integrate into applications, platforms,
+                and workflows.
+              </p>
+            </div>
 
-      {/* DOTS */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer transition ${current === index ? "bg-secondary" : "bg-slate-500"
-              }`}
-          />
-        ))}
-      </div>
-    </section>
-    <About compact/>
-    <Testimonials compact/>
-    </>
+            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-8">
+              <h3 className="text-xl font-medium mb-3">
+                Cloud & IT Platforms
+              </h3>
+              <p className="text-slate-300 leading-relaxed">
+                We build cloud-based and enterprise IT platforms that support
+                scalability, security, and reliable digital operations.
+              </p>
+            </div>
+
+            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-8">
+              <h3 className="text-xl font-medium mb-3">
+                Data & Software Systems
+              </h3>
+              <p className="text-slate-300 leading-relaxed">
+                We develop data platforms and software systems that enable
+                analytics, automation, and modern digital services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INDUSTRIES & CAPABILITIES LINKS */}
+      <section className="pb-32">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-2xl font-medium mb-4">
+              Industries We Work In
+            </h3>
+            <p className="text-slate-300 leading-relaxed mb-6">
+              Our work spans AI and IT-driven domains including cloud
+              infrastructure, data engineering, software platforms, and
+              enterprise technology environments.
+            </p>
+            <Link
+              to="/industries"
+              className="underline underline-offset-4 hover:opacity-80"
+            >
+              View Industries →
+            </Link>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-medium mb-4">
+              Our Capabilities
+            </h3>
+            <p className="text-slate-300 leading-relaxed mb-6">
+              We provide hands-on IT and AI capabilities across infrastructure,
+              platforms, delivery, and operations.
+            </p>
+            <Link
+              to="/capabilities"
+              className="underline underline-offset-4 hover:opacity-80"
+            >
+              View Capabilities →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* PEOPLE & OPPORTUNITIES */}
+      <section className="pb-32">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            Opportunities for People in IT & AI
+          </h2>
+          <p className="text-lg text-slate-300 leading-relaxed">
+            We believe in creating opportunities for people interested in IT and
+            artificial intelligence. Our teams work on real projects involving
+            cloud platforms, AI systems, data engineering, and enterprise
+            software—helping individuals build skills and experience in modern
+            technology environments.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pb-40">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-10 text-center">
+            <h3 className="text-2xl font-medium mb-4">
+              Get Started with SAAV
+            </h3>
+            <p className="text-slate-300 mb-6">
+              Whether you’re interested in technology solutions or opportunities
+              to grow in IT and AI, we’d love to hear from you.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block px-6 py-3 bg-white text-black rounded-md font-medium hover:opacity-90 transition"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
+    </main>
   );
 };
 
