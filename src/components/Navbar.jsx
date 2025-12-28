@@ -189,7 +189,7 @@ const Navbar = () => {
               </div>
             )}
 
-            <NavLink to="/about" onClick={() => setIsOpen(false)}>
+            <NavLink to="/ourcompany" onClick={() => setIsOpen(false)}>
               Our Company
             </NavLink>
 
