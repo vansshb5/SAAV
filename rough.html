@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Careers | SAAV Consulting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background: #f8f9fb;
+color: #1f2937;
+}
+.hero {
+background: linear-gradient(135deg, #0f172a, #1e293b);
+color: white;
+padding: 80px 20px;
+text-align: center;
+}
+.hero h1 {
+font-size: 40px;
+margin-bottom: 12px;
+}
+.hero p {
+font-size: 18px;
+max-width: 700px;
+margin: 0 auto;
+opacity: 0.9;
+}
+.container {
+max-width: 1100px;
+margin: -40px auto 80px;
+
+padding: 0 20px;
+}
+.card {
+background: white;
+border-radius: 16px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+padding: 48px;
+}
+.grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+h2 {
+font-size: 28px;
+margin-bottom: 12px;
+}
+.why ul {
+padding-left: 20px;
+line-height: 1.8;
+}
+form label {
+font-weight: 500;
+display: block;
+margin-top: 16px;
+}
+input, select, textarea {
+width: 100%;
+padding: 12px;
+margin-top: 6px;
+border-radius: 8px;
+border: 1px solid #d1d5db;
+font-size: 14px;
+}
+input[type="file"] {
+padding: 8px;
+}
+
+button {
+margin-top: 24px;
+padding: 14px;
+width: 100%;
+background: #2563eb;
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+}
+button:hover {
+background: #1d4ed8;
+}
+footer {
+text-align: center;
+padding: 40px 20px;
+font-size: 14px;
+color: #6b7280;
+}
+@media (max-width: 900px) {
+.grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+<!-- Hero Section -->
+<section class="hero">
+<h1>Careers at SAAV Consulting</h1>
+&lt;p&gt;
+Join a team of technology professionals shaping the future of IT, Data,
+Cloud, and Artificial Intelligence.
+&lt;/p&gt;
+</section>
+
+<!-- Content -->
+<div class="container">
+<div class="card grid">
+<!-- Left -->
+<div class="why">
+<h2>Why Work With Us</h2>
+&lt;p&gt;
+At SAAV Consulting, we believe our people are our greatest asset.
+We foster a culture of innovation, collaboration, and continuous learning.
+&lt;/p&gt;
+&lt;ul&gt;
+<li>Work on cutting-edge IT, Cloud, Data & AI projects</li>
+<li>Collaborative and growth-focused culture</li>
+<li>Opportunities across consulting, engineering & strategy</li>
+<li>Flexible and inclusive work environment</li>
+</ul>
+</div>
+<!-- Right -->
+<div>
+<h2>Submit Your Resume</h2>
+&lt;p&gt;We’re always looking for talented professionals. Apply below.&lt;/p&gt;
+<form>
+<label>Full Name</label>
+<input type="text" placeholder="Your full name" required>
+<label>Email Address</label>
+<input type="email" placeholder="you@example.com" required>
+<label>Role of Interest</label>
+<select required>
+<option value="">Select a role</option>
+<option>IT Consultant</option>
+<option>Cloud Architect</option>
+<option>Data Engineer</option>
+<option>AI / ML Engineer</option>
+<option>Business Analyst</option>
+<option>Other</option>
+</select>
+<label>Upload Resume (PDF/DOC)</label>
+<input type="file" accept=".pdf,.doc,.docx" required>
+
+<label>Message (Optional)</label>
+<textarea rows="4" placeholder="Tell us about yourself"></textarea>
+<button type="submit">Submit Application</button>
+</form>
+</div>
+</div>
+</div>
+<footer>
+© 2025 SAAV Consulting. All rights reserved.
+</footer>
+</body>
+</html>

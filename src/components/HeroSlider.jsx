@@ -64,20 +64,7 @@ const HeroSlider = () => {
           {slides[current].subtitle}
         </p>
 
-        <div className="flex justify-center gap-6">
-          <Link
-            to="/industries"
-            className="px-6 py-3 bg-white text-black rounded-md font-medium hover:opacity-90 transition"
-          >
-            Explore Industries
-          </Link>
-          <Link
-            to="/capabilities"
-            className="px-6 py-3 border border-white/30 rounded-md font-medium hover:bg-white/10 transition"
-          >
-            View Capabilities
-          </Link>
-        </div>
+ 
       </div>
 
       {/* Indicators */}

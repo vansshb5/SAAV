@@ -81,7 +81,7 @@ const Contact = () => {
                 Office
               </h3>
               <p className="text-slate-400 leading-relaxed">
-                Toranto, Canada<br />
+                Toronto, Canada<br />
                 Serving clients globally
               </p>
             </div>
@@ -92,7 +92,7 @@ const Contact = () => {
               </h3>
               <p className="text-slate-400">
                 Monday – Friday<br />
-                9:00 AM – 6:00 PM CAT
+                9:00 AM – 6:00 PM EST
               </p>
             </div>
 

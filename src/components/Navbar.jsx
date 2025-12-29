@@ -31,7 +31,7 @@ const Navbar = () => {
   const closeServicesWithDelay = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setServicesOpen(false);
-    }, 1200); // 1.2 seconds delay
+    }, 1200);
   };
 
   return (
@@ -62,7 +62,7 @@ const Navbar = () => {
         {/* DESKTOP NAV */}
         <ul className="hidden md:flex items-center gap-12 text-base lg:text-lg font-medium text-slate-200">
 
-          {/* Home */}
+          {/* HOME */}
           <li className="relative group">
             <NavLink
               to="/"
@@ -77,49 +77,55 @@ const Navbar = () => {
             <span className="absolute -bottom-1 left-0 h-[2px] bg-secondary w-0 group-hover:w-full transition-all" />
           </li>
 
-    {/* OUR SERVICES (DELAYED + UNDERLINE FIXED) */}
-<li
-  className="relative group cursor-pointer"
-  onMouseEnter={openServices}
-  onMouseLeave={closeServicesWithDelay}
->
-  <span className="text-slate-300 group-hover:text-white transition-colors">
-    Our Services
-  </span>
+          {/* ABOUT US */}
+          <li className="relative group">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  isActive ? "text-white" : "text-slate-300"
+                } group-hover:text-white`
+              }
+            >
+              About Us
+            </NavLink>
+            <span className="absolute -bottom-1 left-0 h-[2px] bg-secondary w-0 group-hover:w-full transition-all" />
+          </li>
 
-  {/* underline animation */}
-  <span
-    className="
-      absolute -bottom-1 left-0 h-[2px] bg-secondary
-      w-0 group-hover:w-full
-      transition-all duration-300
-    "
-  />
+          {/* OUR SERVICES */}
+          <li
+            className="relative group cursor-pointer"
+            onMouseEnter={openServices}
+            onMouseLeave={closeServicesWithDelay}
+          >
+            <span className="text-slate-300 group-hover:text-white transition-colors">
+              Our Services
+            </span>
 
-  {/* Dropdown */}
-  {servicesOpen && (
-    <div
-      className="absolute left-0 top-full mt-4 w-56
-                 rounded-md bg-[#020617]
-                 border border-white/10 shadow-xl"
-      onMouseEnter={openServices}
-      onMouseLeave={closeServicesWithDelay}
-    >
-      <NavLink
-        to="/industries"
-        className="block px-5 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-white"
-      >
-        Industries
-      </NavLink>
-      <NavLink
-        to="/capabilities"
-        className="block px-5 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-white"
-      >
-        Capabilities
-      </NavLink>
-    </div>
-  )}
-</li>
+            <span className="absolute -bottom-1 left-0 h-[2px] bg-secondary w-0 group-hover:w-full transition-all duration-300" />
+
+            {servicesOpen && (
+              <div
+                className="absolute left-0 top-full mt-4 w-56 rounded-md
+                           bg-[#020617] border border-white/10 shadow-xl"
+                onMouseEnter={openServices}
+                onMouseLeave={closeServicesWithDelay}
+              >
+                <NavLink
+                  to="/industries"
+                  className="block px-5 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-white"
+                >
+                  Industries
+                </NavLink>
+                <NavLink
+                  to="/capabilities"
+                  className="block px-5 py-3 text-sm text-slate-300 hover:bg-white/5 hover:text-white"
+                >
+                  Capabilities
+                </NavLink>
+              </div>
+            )}
+          </li>
 
           {/* OUR COMPANY */}
           <li className="relative group">
@@ -132,6 +138,21 @@ const Navbar = () => {
               }
             >
               Our Company
+            </NavLink>
+            <span className="absolute -bottom-1 left-0 h-[2px] bg-secondary w-0 group-hover:w-full transition-all" />
+          </li>
+
+          {/* CAREERS (NEW) */}
+          <li className="relative group">
+            <NavLink
+              to="/careers"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  isActive ? "text-white" : "text-slate-300"
+                } group-hover:text-white`
+              }
+            >
+              Careers
             </NavLink>
             <span className="absolute -bottom-1 left-0 h-[2px] bg-secondary w-0 group-hover:w-full transition-all" />
           </li>
@@ -171,6 +192,10 @@ const Navbar = () => {
               Home
             </NavLink>
 
+            <NavLink to="/about" onClick={() => setIsOpen(false)}>
+              About Us
+            </NavLink>
+
             <button
               className="text-left"
               onClick={() => setServicesOpen(!servicesOpen)}
@@ -191,6 +216,10 @@ const Navbar = () => {
 
             <NavLink to="/ourcompany" onClick={() => setIsOpen(false)}>
               Our Company
+            </NavLink>
+
+            <NavLink to="/careers" onClick={() => setIsOpen(false)}>
+              Careers
             </NavLink>
 
             <NavLink to="/contact" onClick={() => setIsOpen(false)}>

@@ -1,127 +1,149 @@
-import useScrollReveal from "../hooks/useScrollReveal";
-
+import { useEffect, useState } from "react";
+import heroImg from "../assets/about/hero.png";
+import missionImg from "../assets/about/mission.png";
+import approachImg from "../assets/about/approach.png";
 
 const About = () => {
-  // 🔹 Hooks MUST be here
-  const [introRef, introVisible] = useScrollReveal();
-  const [whoRef, whoVisible] = useScrollReveal();
-  const [valuesRef, valuesVisible] = useScrollReveal();
-  const [approachRef, approachVisible] = useScrollReveal();
-  const [statsRef, statsVisible] = useScrollReveal();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
 
   return (
-    <section
-      id="about"
-      className="bg-[#020617] text-slate-300 pt-32 pb-28"
-    >
-      <div className="max-w-7xl mx-auto px-6">
+    <main className="bg-slate-50 text-slate-900">
 
-        {/* INTRO */}
+      {/* HERO */}
+      <section className="relative pt-32 pb-24 overflow-hidden">
+        <img
+          src={heroImg}
+          alt="About SAAV Consulting"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-900/70" />
+
         <div
-          ref={introRef}
-          className={`max-w-3xl mb-24 reveal ${
-            introVisible ? "reveal-active" : ""
-          }`}
+          className={`relative max-w-6xl mx-auto px-6 transition-all duration-1000
+            ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+          `}
         >
           <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-            About Us
+            About SAAV Consulting
           </h1>
-          <p className="text-lg leading-relaxed text-slate-400">
-            We are a technology consulting firm focused on helping organizations
-            design, build, and scale reliable digital systems.
+          <p className="text-lg text-slate-200 max-w-3xl leading-relaxed">
+            SAAV Consulting is a technology consulting firm focused on enabling
+            organizations to modernize, innovate, and grow through IT, data,
+            cloud, and artificial intelligence solutions.
           </p>
         </div>
+      </section>
 
-        {/* WHO WE ARE */}
-        <div
-          ref={whoRef}
-          className={`grid md:grid-cols-2 gap-20 mb-28 reveal ${
-            whoVisible ? "reveal-active" : ""
-          }`}
-        >
-          <div>
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Who We Are
-            </h2>
-            <p className="leading-relaxed text-slate-400">
-              SAAV is a modern technology consultancy working at the intersection
-              of engineering, data, and cloud platforms. We partner with teams
-              that value clarity, quality, and long-term thinking.
-            </p>
-          </div>
+      {/* CONTENT */}
+      <section className="py-32">
+        <div className="max-w-7xl mx-auto px-6 space-y-32">
 
-          <div>
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              What We Do
-            </h2>
-            <p className="leading-relaxed text-slate-400">
-              We help organizations translate business goals into scalable
-              architectures and well-engineered software systems that perform
-              reliably in production.
-            </p>
-          </div>
-        </div>
-
-        {/* VALUES */}
-     <div className="mb-28">
-  
-
-</div>
-
-        {/* APPROACH */}
-        <div
-          ref={approachRef}
-          className={`mb-28 max-w-4xl reveal ${
-            approachVisible ? "reveal-active" : ""
-          }`}
-        >
-          <h2 className="text-2xl font-semibold text-white mb-8">
-            Our Approach
-          </h2>
-
-          <div className="space-y-6 text-slate-400 leading-relaxed">
-            <p>
-              We begin by understanding your business context, technical
-              constraints, and long-term objectives.
-            </p>
-            <p>
-              Our team designs architectures that balance performance,
-              scalability, and operational simplicity, validating decisions
-              early to reduce risk.
-            </p>
-            <p>
-              We deliver incrementally, ensuring systems are production-ready
-              and adaptable to future needs.
-            </p>
-          </div>
-        </div>
-
-        {/* STATS */}
-        <div
-          ref={statsRef}
-          className={`grid md:grid-cols-4 gap-12 border-t border-white/10 pt-16 text-center reveal ${
-            statsVisible ? "reveal-active" : ""
-          }`}
-        >
-          {[
-            { value: "10+", label: "Years of Experience" },
-            { value: "50+", label: "Projects Delivered" },
-            { value: "100%", label: "Client Focus" },
-            { value: "24/7", label: "Engineering Mindset" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl font-semibold text-white">
-                {stat.value}
-              </p>
-              <p className="text-sm text-slate-400 mt-2">
-                {stat.label}
+          {/* MISSION */}
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div
+              className={`transition-all duration-1000 delay-100
+                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+              `}
+            >
+              <h2 className="text-3xl font-medium mb-6">
+                Our Mission
+              </h2>
+              <p className="text-slate-600 leading-relaxed text-lg">
+                Our mission is to help organizations unlock value from their
+                technology investments. We deliver consulting and engineering
+                services that align technology with business goals, improve
+                performance, and support long-term growth.
               </p>
             </div>
-          ))}
-        </div>
 
-      </div>
-    </section>
+            <img
+              src={missionImg}
+              alt="Technology strategy and planning"
+              className="rounded-xl border border-slate-200"
+            />
+          </div>
+
+          {/* WHY SAAV */}
+          <div className="bg-white border border-slate-200 rounded-xl p-12">
+            <h2 className="text-3xl font-medium mb-10">
+              Why Choose SAAV Consulting
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-10 text-slate-600">
+              <div>
+                <h3 className="font-medium text-lg mb-2">
+                  Client-Centric Expertise
+                </h3>
+                <p>
+                  We work closely with stakeholders to understand unique
+                  challenges and deliver solutions that create measurable
+                  impact.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-lg mb-2">
+                  Innovation-Driven Solutions
+                </h3>
+                <p>
+                  From cloud and data platforms to AI and automation, we apply
+                  modern technologies responsibly and effectively.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-medium text-lg mb-2">
+                  End-to-End Delivery
+                </h3>
+                <p>
+                  We support clients from strategy and planning through
+                  implementation and ongoing optimization.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* APPROACH */}
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <img
+              src={approachImg}
+              alt="Consulting approach"
+              className="rounded-xl border border-slate-200"
+            />
+
+            <div
+              className={`transition-all duration-1000 delay-200
+                ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+              `}
+            >
+              <h2 className="text-3xl font-medium mb-6">
+                Our Approach
+              </h2>
+              <p className="text-slate-600 leading-relaxed text-lg mb-6">
+                We follow a structured and collaborative approach to consulting,
+                combining strategic insight with hands-on delivery.
+              </p>
+
+              <ul className="space-y-3 text-slate-600">
+                <li>— Assess and understand business and technology context</li>
+                <li>— Design scalable and practical solutions</li>
+                <li>— Deliver with engineering discipline and clarity</li>
+                <li>— Optimize continuously for long-term success</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer className="text-center text-sm text-slate-500 pb-10">
+        © 2025 SAAV Consulting. All rights reserved.
+      </footer>
+    </main>
   );
 };
 
