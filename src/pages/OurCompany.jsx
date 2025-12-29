@@ -151,6 +151,11 @@ const OurCompany = () => {
 
         {/* OFFICES */}
         <section className="grid md:grid-cols-2 gap-16 items-center">
+                <img
+            src={officeImg}
+            alt="Office and remote collaboration"
+            className="rounded-xl border border-white/10"
+          />
           <div>
             <h2 className="text-3xl font-medium mb-6">
               Our Presence
@@ -163,11 +168,7 @@ const OurCompany = () => {
             </p>
           </div>
 
-          <img
-            src={officeImg}
-            alt="Office and remote collaboration"
-            className="rounded-xl border border-white/10"
-          />
+      
         </section>
 
       </div>

@@ -20,13 +20,48 @@ const Footer = () => {
             Company
           </h3>
           <ul className="space-y-3 text-sm">
-            <li><a href="#about" className="hover:text-white transition">About</a></li>
-            <li><a href="#services" className="hover:text-white transition">Services</a></li>
-            <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
+            <li>
+              <a href="/about" className="hover:text-white transition">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/ourcompany" className="hover:text-white transition">
+                Our Company
+              </a>
+            </li>
+            <li>
+              <a href="/careers" className="hover:text-white transition">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-white transition">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
-     
+        {/* SERVICES */}
+        <div>
+          <h3 className="text-white font-medium mb-4 text-sm uppercase tracking-wide">
+            Services
+          </h3>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <a href="/industries" className="hover:text-white transition">
+                Industries
+              </a>
+            </li>
+            <li>
+              <a href="/capabilities" className="hover:text-white transition">
+                Capabilities
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
       {/* BOTTOM BAR */}
