@@ -41,12 +41,29 @@ const Careers = () => {
                 practical skills, contribute to meaningful projects, and grow
                 alongside experienced consultants and engineers.
               </p>
-              <ul className="space-y-3 text-slate-600">
-                <li>— Enterprise-scale IT, Cloud, Data & AI initiatives</li>
-                <li>— Exposure to real consulting and delivery environments</li>
-                <li>— Strong emphasis on learning and mentoring</li>
-                <li>— Collaborative, respectful, and inclusive culture</li>
-              </ul>
+             <ul className="space-y-4">
+  {[
+    "Enterprise-scale IT, Cloud, Data & AI initiatives",
+    "Exposure to real consulting and delivery environments",
+    "Strong emphasis on learning and mentoring",
+    "Collaborative, respectful, and inclusive culture",
+  ].map((item) => (
+    <li
+      key={item}
+      className="
+        pl-4
+        border-l-2 border-slate-300
+        text-slate-600 leading-relaxed
+        transition-all duration-300
+        hover:border-blue-600
+        hover:text-slate-800
+      "
+    >
+      {item}
+    </li>
+  ))}
+</ul>
+
             </div>
 
             <img
@@ -73,12 +90,28 @@ const Careers = () => {
                 platforms, adopt data-driven approaches, and apply intelligent
                 systems across their operations.
               </p>
-              <ul className="space-y-3 text-slate-600">
-                <li>— Cloud platforms, infrastructure, and architecture</li>
-                <li>— Data engineering, analytics, and reporting systems</li>
-                <li>— AI and machine learning applications</li>
-                <li>— Enterprise software development and integration</li>
-              </ul>
+          <ul className="space-y-4">
+  {[
+    "Cloud platforms, infrastructure, and architecture",
+    "Data engineering, analytics, and reporting systems",
+    "Artificial intelligence and machine learning applications",
+    "Enterprise software development and system integration",
+  ].map((item) => (
+    <li
+      key={item}
+      className="
+        pl-4 border-l-2 border-slate-300
+        text-slate-600 leading-relaxed
+        transition-all duration-300
+        hover:border-blue-600
+        hover:text-slate-800
+      "
+    >
+      {item}
+    </li>
+  ))}
+</ul>
+
             </div>
           </div>
 
@@ -155,10 +188,6 @@ const Careers = () => {
 
         </div>
       </section>
-
-      <footer className="text-center text-sm text-slate-500 pb-10">
-        © 2025 SAAV Consulting. All rights reserved.
-      </footer>
 
     </main>
   );

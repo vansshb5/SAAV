@@ -1,42 +1,51 @@
 import infraImg from "../assets/capabilities/infrastructure.png";
 import dataImg from "../assets/capabilities/data.png";
 import opsImg from "../assets/capabilities/operations.png";
+import aiImg from "../assets/capabilities/ai.png";
 
 const capabilityGroups = [
   {
-    title: "IT Infrastructure & Cloud",
+    title: "IT Strategy & Transformation",
     description:
-      "Designing, building, and operating scalable IT infrastructure across on-prem, hybrid, and cloud environments to support enterprise workloads and critical systems.",
+      "We partner with organizations to define robust IT strategies that modernize infrastructure, streamline processes, and align technology with business priorities.",
     image: infraImg,
     items: [
-      "Cloud Architecture & Migration",
-      "Hybrid & On-Prem Infrastructure",
-      "Network & Security Architecture",
-      "High Availability & Resilience Design",
+      "Technology roadmap development",
+      "Enterprise architecture planning",
+      "IT governance & risk management",
     ],
   },
   {
-    title: "Data, Platforms & Applications",
+    title: "Cloud Consulting & Engineering",
     description:
-      "Developing and modernizing data platforms and enterprise applications to enable reliable operations, analytics, and digital workflows.",
-    image: dataImg,
-    items: [
-      "Data Platforms & Analytics",
-      "Application Modernization",
-      "Systems Integration",
-      "API & Platform Engineering",
-    ],
-  },
-  {
-    title: "Enterprise IT Delivery & Operations",
-    description:
-      "Providing structured delivery, governance, and operational support to ensure enterprise IT initiatives are executed reliably and sustained over time.",
+      "We guide organizations through their cloud journey from strategy through deployment and optimization, enabling scalable, secure, and cost-efficient platforms.",
     image: opsImg,
     items: [
-      "Program & IT Delivery Management",
-      "IT Operations & Support Models",
-      "Monitoring & Operational Analytics",
-      "Process Automation & Optimization",
+      "Public, private, and hybrid cloud strategies",
+      "Cloud architecture & implementation",
+      "Migration & modernization services",
+    ],
+  },
+  {
+    title: "Data & Analytics",
+    description:
+      "We help organizations harness data to improve decision-making, operational performance, and competitive advantage through modern data platforms.",
+    image: dataImg,
+    items: [
+      "Data architecture & engineering",
+      "Business intelligence & reporting",
+      "Data governance & quality frameworks",
+    ],
+  },
+  {
+    title: "Artificial Intelligence & Machine Learning",
+    description:
+      "From AI strategy to operational deployment, we enable organizations to adopt and scale intelligent solutions that address real business challenges.",
+    image: aiImg,
+    items: [
+      "AI strategy & readiness assessments",
+      "Machine learning model development",
+      "Intelligent automation & predictive analytics",
     ],
   },
 ];
@@ -52,19 +61,20 @@ const Capabilities = () => {
             Our Capabilities
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
-            SAAV delivers enterprise IT services across infrastructure, cloud,
-            data, and platforms. Our capabilities focus on building, integrating,
-            and operating reliable systems that support critical business and
-            operational needs.
+            SAAV Consulting delivers technology consulting services across IT
+            strategy, cloud engineering, data platforms, and artificial
+            intelligence, helping organizations build scalable and sustainable
+            digital capabilities.
           </p>
         </section>
 
         {/* CAPABILITY GROUPS */}
-        <section className="grid md:grid-cols-3 gap-8">
+        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {capabilityGroups.map((group) => (
             <div
               key={group.title}
-              className="bg-white/[0.03] border border-white/10 rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+              className="bg-white/[0.03] border border-white/10 rounded-lg overflow-hidden
+                         transition-transform duration-300 hover:scale-[1.02]"
             >
               {/* IMAGE */}
               <img
@@ -74,21 +84,18 @@ const Capabilities = () => {
               />
 
               <div className="p-8">
-                <h2 className="text-2xl font-medium mb-4">
+                <h2 className="text-xl font-medium mb-4">
                   {group.title}
                 </h2>
 
-                <p className="text-slate-300 mb-6 leading-relaxed">
+                <p className="text-slate-300 mb-6 leading-relaxed text-sm">
                   {group.description}
                 </p>
 
-                <ul className="space-y-3">
+                <ul className="space-y-2 text-sm">
                   {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="text-slate-300"
-                    >
-                      {item}
+                    <li key={item} className="text-slate-300">
+                      — {item}
                     </li>
                   ))}
                 </ul>

@@ -128,21 +128,35 @@ const About = () => {
                 combining strategic insight with hands-on delivery.
               </p>
 
-              <ul className="space-y-3 text-slate-600">
-                <li>— Assess and understand business and technology context</li>
-                <li>— Design scalable and practical solutions</li>
-                <li>— Deliver with engineering discipline and clarity</li>
-                <li>— Optimize continuously for long-term success</li>
-              </ul>
+             <ul className="space-y-4">
+  {[
+    "Assess and understand business and technology context",
+    "Design scalable and practical solutions",
+    "Deliver with engineering discipline and clarity",
+    "Optimize continuously for long-term success",
+  ].map((item) => (
+    <li
+      key={item}
+      className="
+        pl-4 border-l-2 border-slate-300
+        text-slate-600 leading-relaxed
+        transition-all duration-300
+        hover:border-blue-600
+        hover:text-slate-800
+      "
+    >
+      {item}
+    </li>
+  ))}
+</ul>
+
             </div>
           </div>
 
         </div>
       </section>
 
-      <footer className="text-center text-sm text-slate-500 pb-10">
-        © 2025 SAAV Consulting. All rights reserved.
-      </footer>
+   
     </main>
   );
 };
