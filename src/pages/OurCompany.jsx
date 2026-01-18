@@ -1,177 +1,164 @@
 import heroImg from "../assets/company/hero.png";
-import techImg from "../assets/company/tech.png";
-import peopleImg from "../assets/company/people.png";
-import officeImg from "../assets/company/office.png";
+import missionImg from "../assets/company/mission.png";
+import approachImg from "../assets/company/approach.png";
 
 const OurCompany = () => {
   return (
-    <main className="pt-32 pb-24 bg-gradient-to-b from-[#020617] via-[#0b1220] to-[#0f172a] text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <main className="bg-slate-50 text-slate-900">
 
-        {/* HERO / INTRO */}
-        <section className="grid md:grid-cols-2 gap-16 items-center mb-28">
-          <div>
-            <p className="uppercase tracking-widest text-slate-400 mb-4">
-              Our Company
-            </p>
-            <h1 className="text-4xl md:text-6xl font-semibold mb-8 leading-tight">
-              IT & AI Solutions for
-              <span className="block text-white">
-                Modern Digital Environments
-              </span>
-            </h1>
-            <p className="text-xl text-slate-300 leading-relaxed">
-              SAAV is an IT and AI-focused technology company building intelligent
-              systems, platforms, and applications. We work across cloud, data,
-              artificial intelligence, and enterprise software to support modern
-              digital operations and innovation.
-            </p>
-          </div>
+      {/* HERO */}
+      <section className="relative pt-32 pb-24">
+        <img
+          src={heroImg}
+          alt="SAAV Consulting"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-900/60" />
 
-          <img
-            src={heroImg}
-            alt="IT and AI systems"
-            className="rounded-xl border border-white/10"
-          />
-        </section>
+        <div className="relative max-w-6xl mx-auto px-6">
+          <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+            Our Company
+          </h1>
+          <p className="text-lg text-slate-200 max-w-3xl leading-relaxed">
+            SAAV Consulting is a technology consulting firm committed to helping
+            organizations modernize, innovate, and grow through thoughtful use
+            of IT, data, cloud, and artificial intelligence.
+          </p>
+        </div>
+      </section>
 
-        {/* VALUE STRIP */}
-        <section className="grid md:grid-cols-3 gap-8 mb-32">
-          {[
-            {
-              title: "Technology-Driven",
-              text:
-                "Our work is centered around real-world IT and AI systems, focusing on scalable architectures, reliable platforms, and production-ready solutions.",
-            },
-            {
-              title: "Hands-On Delivery",
-              text:
-                "We focus on building and implementing technology solutions, enabling systems that are practical, maintainable, and ready for real usage.",
-            },
-            {
-              title: "Built for Growth",
-              text:
-                "Our platforms and solutions are designed to evolve, supporting continuous learning, innovation, and long-term technology growth.",
-            },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="bg-white/[0.04] border border-white/10 rounded-xl p-8"
-            >
-              <h3 className="text-xl font-medium mb-3">
-                {item.title}
-              </h3>
-              <p className="text-slate-300 leading-relaxed">
-                {item.text}
-              </p>
-            </div>
-          ))}
-        </section>
-
-        {/* WHO WE ARE / HOW WE WORK */}
-        <section className="grid md:grid-cols-2 gap-16 items-center mb-32">
+      {/* OUR MISSION */}
+      <section id="mission" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-medium mb-6">
-              Who We Are
+              Our Mission
             </h2>
-            <p className="text-slate-300 leading-relaxed text-lg">
-              We are a team of developers, engineers, data specialists, and AI
-              practitioners working across software, cloud infrastructure, and
-              intelligent systems. Our focus is on building technology that
-              solves real problems and delivers measurable value.
+            <p className="text-slate-600 leading-relaxed text-lg">
+              Our mission is to deliver consulting and engineering services that
+              help organizations unlock value from their technology investments.
+              We focus on aligning technology with business priorities to drive
+              measurable outcomes and long-term growth.
             </p>
           </div>
 
           <img
-            src={techImg}
-            alt="Technology and systems"
-            className="rounded-xl border border-white/10"
+            src={missionImg}
+            alt="Technology strategy and mission"
+            className="rounded-xl border border-slate-200 w-full"
           />
-        </section>
+        </div>
+      </section>
 
-        {/* PRINCIPLES */}
-        <section className="mb-32">
+      {/* OUR APPROACH */}
+      <section id="approach" className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+          <img
+            src={approachImg}
+            alt="Consulting approach"
+            className="rounded-xl border border-slate-200 w-full"
+          />
+
+          <div>
+            <h2 className="text-3xl font-medium mb-10">
+              Our Approach
+            </h2>
+
+            <ul className="space-y-4">
+              {[
+                "Assess business objectives, technology landscape, and constraints",
+                "Design scalable and practical solutions aligned with strategy",
+                "Deliver solutions using disciplined engineering practices",
+                "Continuously optimize systems for long-term success",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="
+                    pl-4 border-l-2 border-slate-300
+                    text-slate-600 leading-relaxed
+                    transition-all duration-300
+                    hover:border-blue-600
+                    hover:text-slate-800
+                  "
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE SAAV */}
+      <section id="why" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-medium mb-12">
-            Our Principles
+            Why Choose SAAV
           </h2>
 
           <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Practical Innovation",
-                text:
-                  "We focus on applying AI and IT in practical ways that can be deployed, used, and improved in real environments.",
-              },
-              {
-                title: "Technical Excellence",
-                text:
-                  "Our solutions are built with strong engineering practices, clean architectures, and attention to performance and reliability.",
-              },
-              {
-                title: "Learning & Growth",
-                text:
-                  "We believe in continuous learning and creating opportunities for people to grow their skills while working on real technology challenges.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="border-l-2 border-secondary pl-6"
-              >
-                <h3 className="text-xl font-medium mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-slate-300 leading-relaxed">
-                  {item.text}
-                </p>
-              </div>
-            ))}
+            <div>
+              <h3 className="text-lg font-medium mb-2">
+                Client-Centric Expertise
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                We work closely with stakeholders to understand challenges and
+                deliver tailored solutions with measurable impact.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-medium mb-2">
+                Innovation with Purpose
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                We apply modern technologies responsibly, ensuring solutions are
+                practical, secure, and scalable.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-medium mb-2">
+                End-to-End Delivery
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                From strategy through execution, we remain engaged to ensure
+                outcomes are delivered and sustained.
+              </p>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* PEOPLE */}
-        <section className="grid md:grid-cols-2 gap-16 items-center mb-32">
-          <div>
-            <h2 className="text-3xl font-medium mb-6">
-              Our People
-            </h2>
-            <p className="text-slate-300 leading-relaxed text-lg">
-              Our people are at the center of everything we do. We bring together
-              individuals interested in IT and AI, providing opportunities to
-              work on meaningful projects, gain hands-on experience, and grow
-              within a collaborative technology-driven environment.
-            </p>
-          </div>
+      {/* PEOPLE */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-medium mb-6">
+            Our People
+          </h2>
+          <p className="text-slate-600 leading-relaxed text-lg max-w-4xl">
+            Our team brings together consultants, engineers, and technologists
+            with experience across IT strategy, cloud platforms, data systems,
+            and artificial intelligence.
+          </p>
+        </div>
+      </section>
 
-          <img
-            src={peopleImg}
-            alt="People working in IT and AI"
-            className="rounded-xl border border-white/10"
-          />
-        </section>
+      {/* PRESENCE */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-medium mb-6">
+            Our Presence
+          </h2>
+          <p className="text-slate-600 leading-relaxed text-lg max-w-4xl">
+            SAAV Consulting operates with a flexible delivery model, working with
+            clients across locations through a mix of on-site and remote
+            collaboration.
+          </p>
+        </div>
+      </section>
 
-        {/* OFFICES */}
-        <section className="grid md:grid-cols-2 gap-16 items-center">
-                <img
-            src={officeImg}
-            alt="Office and remote collaboration"
-            className="rounded-xl border border-white/10"
-          />
-          <div>
-            <h2 className="text-3xl font-medium mb-6">
-              Our Presence
-            </h2>
-            <p className="text-slate-300 leading-relaxed text-lg">
-              SAAV operates with a flexible working model, supporting collaboration
-              across locations. Our teams work remotely and in shared spaces,
-              enabling access to opportunities and projects regardless of
-              geography.
-            </p>
-          </div>
-
-      
-        </section>
-
-      </div>
     </main>
   );
 };

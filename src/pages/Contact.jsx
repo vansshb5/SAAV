@@ -1,106 +1,113 @@
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="bg-[#020617] text-slate-300 pt-32 pb-32"
-    >
-      <div className="max-w-7xl mx-auto px-6">
+    <main className="bg-slate-50 text-slate-900">
 
-        {/* HEADER */}
-        <div className="max-w-3xl mb-20">
-          <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+      {/* PAGE INTRO */}
+      <section className="pt-32 pb-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             Contact Us
           </h1>
-          <p className="text-lg leading-relaxed text-slate-400">
-            We’d be happy to discuss your challenges, answer questions, or explore
-            how we can work together.
+          <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
+            Get in touch with SAAV Consulting to discuss technology solutions,
+            consulting engagements, or career opportunities. Our team will
+            respond promptly.
           </p>
         </div>
+      </section>
 
-        {/* CONTENT */}
-        <div className="grid md:grid-cols-2 gap-20">
+      {/* CONTACT CONTENT */}
+      <section className="pb-32">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
 
           {/* FORM */}
-          <form className="space-y-8">
+          <div className="bg-white border border-slate-200 rounded-xl p-10">
+            <h2 className="text-2xl font-medium mb-6">
+              Send Us a Message
+            </h2>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-400 mb-2">
-                Full Name
-              </label>
-              <input
-                type="text"
-                placeholder="Your name"
-                className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-secondary transition"
-              />
-            </div>
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-400 mb-2">
-                Email Address
-              </label>
-              <input
-                type="email"
-                placeholder="you@example.com"
-                className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-secondary transition"
-              />
-            </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="w-full border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-400 mb-2">
-                Message
-              </label>
-              <textarea
-                rows="5"
-                placeholder="Tell us about your project..."
-                className="w-full bg-transparent border-b border-white/20 py-3 text-white resize-none focus:outline-none focus:border-secondary transition"
-              />
-            </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  className="w-full border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+              </div>
 
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-secondary text-black font-medium rounded hover:opacity-90 transition"
-            >
-              Send Message →
-            </button>
-          </form>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  rows="5"
+                  required
+                  className="w-full border border-slate-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 rounded-md transition"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
 
           {/* CONTACT INFO */}
-          <div className="space-y-10">
+          <div>
+            <h2 className="text-2xl font-medium mb-6">
+              Contact Information
+            </h2>
 
-            <div>
-              <h3 className="text-white font-semibold mb-2">
-                Email
-              </h3>
-              <p className="text-slate-400">
-                contact@saav.com
-              </p>
-            </div>
+            <ul className="space-y-4 text-slate-600">
+              <li>
+                <strong>Email:</strong> contact@saavconsulting.com
+              </li>
+              <li>
+                <strong>Careers:</strong> careers@saavconsulting.com
+              </li>
+              <li>
+                <strong>Working Model:</strong> Remote & Client Locations
+              </li>
+            </ul>
 
-            <div>
-              <h3 className="text-white font-semibold mb-2">
-                Office
-              </h3>
-              <p className="text-slate-400 leading-relaxed">
-                Toronto, Canada<br />
-                Serving clients globally
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-2">
-                Working Hours
-              </h3>
-              <p className="text-slate-400">
-                Monday – Friday<br />
-                9:00 AM – 6:00 PM EST
-              </p>
-            </div>
-
+            <p className="mt-8 text-slate-600 leading-relaxed">
+              SAAV Consulting works with organizations globally through a
+              flexible engagement model, supporting both remote collaboration
+              and on-site delivery when required.
+            </p>
           </div>
-        </div>
 
-      </div>
-    </section>
+        </div>
+      </section>
+
+    </main>
   );
 };
 

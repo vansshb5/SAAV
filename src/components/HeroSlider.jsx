@@ -49,14 +49,15 @@ const HeroSlider = () => {
       ))}
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/90" />
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl px-6">
-        <h1
-          key={slides[current].title}
-          className="text-4xl md:text-6xl font-semibold mb-6 animate-slideFade"
-        >
+     <h1
+  key={slides[current].title}
+  className="text-4xl md:text-5xl font-semibold mb-6 animate-slideFade text-blue-400"
+>
+
           {slides[current].title}
         </h1>
 

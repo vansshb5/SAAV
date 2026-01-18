@@ -3,6 +3,8 @@
 @tailwind utilities;
 body {
   font-family: Inter, sans-serif;
+    width: 100%;
+  overflow-x: hidden;
 }
 .reveal {
   opacity: 0;

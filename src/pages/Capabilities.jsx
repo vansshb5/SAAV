@@ -1,6 +1,6 @@
 import infraImg from "../assets/capabilities/infrastructure.png";
+import cloudImg from "../assets/capabilities/cloud.png";
 import dataImg from "../assets/capabilities/data.png";
-import opsImg from "../assets/capabilities/operations.png";
 import aiImg from "../assets/capabilities/ai.png";
 
 const capabilityGroups = [
@@ -18,8 +18,8 @@ const capabilityGroups = [
   {
     title: "Cloud Consulting & Engineering",
     description:
-      "We guide organizations through their cloud journey from strategy through deployment and optimization, enabling scalable, secure, and cost-efficient platforms.",
-    image: opsImg,
+      "We guide organizations through cloud adoption, migration, and optimization using secure, scalable, and cost-efficient platforms.",
+    image: cloudImg,
     items: [
       "Public, private, and hybrid cloud strategies",
       "Cloud architecture & implementation",
@@ -29,7 +29,7 @@ const capabilityGroups = [
   {
     title: "Data & Analytics",
     description:
-      "We help organizations harness data to improve decision-making, operational performance, and competitive advantage through modern data platforms.",
+      "We help organizations harness data to improve decision-making, performance, and competitive advantage.",
     image: dataImg,
     items: [
       "Data architecture & engineering",
@@ -40,7 +40,7 @@ const capabilityGroups = [
   {
     title: "Artificial Intelligence & Machine Learning",
     description:
-      "From AI strategy to operational deployment, we enable organizations to adopt and scale intelligent solutions that address real business challenges.",
+      "From strategic planning to operational deployment, we enable organizations to scale intelligent solutions that solve real business problems.",
     image: aiImg,
     items: [
       "AI strategy & readiness assessments",
@@ -52,74 +52,74 @@ const capabilityGroups = [
 
 const Capabilities = () => {
   return (
-    <main className="pt-32 pb-24 bg-gradient-to-b from-[#020617] via-[#0b1220] to-[#0f172a] text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <main className="bg-slate-50 text-slate-900">
 
-        {/* PAGE INTRO */}
-        <section className="max-w-4xl mb-20">
+      {/* PAGE INTRO */}
+      <section className="pt-32 pb-20">
+        <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             Our Capabilities
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            SAAV Consulting delivers technology consulting services across IT
-            strategy, cloud engineering, data platforms, and artificial
-            intelligence, helping organizations build scalable and sustainable
-            digital capabilities.
+          <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
+            SAAV Consulting delivers end-to-end technology capabilities across
+            strategy, cloud, data, and artificial intelligence to support
+            business transformation and long-term growth.
           </p>
-        </section>
+        </div>
+      </section>
 
-        {/* CAPABILITY GROUPS */}
-        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* CAPABILITIES GRID */}
+      <section className="pb-32">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
           {capabilityGroups.map((group) => (
             <div
               key={group.title}
-              className="bg-white/[0.03] border border-white/10 rounded-lg overflow-hidden
-                         transition-transform duration-300 hover:scale-[1.02]"
+              className="
+                bg-white border border-slate-200 rounded-xl overflow-hidden
+                transition-all duration-300
+                hover:shadow-lg hover:-translate-y-1
+              "
             >
               {/* IMAGE */}
               <img
                 src={group.image}
                 alt={group.title}
-                className="w-full h-44 object-cover"
+                className="w-full h-40 object-cover"
               />
 
-              <div className="p-8">
-                <h2 className="text-xl font-medium mb-4">
+              {/* CONTENT */}
+              <div className="p-6">
+                <h2 className="text-xl font-medium mb-3">
                   {group.title}
                 </h2>
 
-                <p className="text-slate-300 mb-6 leading-relaxed text-sm">
+                <p className="text-slate-600 mb-4 leading-relaxed">
                   {group.description}
                 </p>
 
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-3">
                   {group.items.map((item) => (
-                    <li key={item} className="text-slate-300">
-                      — {item}
+                    <li
+                      key={item}
+                      className="
+                        pl-4 border-l-2 border-slate-300
+                        text-slate-600 text-sm
+                        transition-all duration-300
+                        hover:border-blue-600 hover:text-slate-800
+                      "
+                    >
+                      {item}
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
           ))}
-        </section>
 
-        {/* CROSS LINK */}
-        <section className="mt-24 max-w-4xl">
-          <p className="text-slate-300 text-lg">
-            These capabilities are applied across the industries we serve. Learn
-            more about our industry experience{" "}
-            <a
-              href="/industries"
-              className="text-white underline underline-offset-4 hover:opacity-80"
-            >
-              here
-            </a>
-            .
-          </p>
-        </section>
+        </div>
+      </section>
 
-      </div>
     </main>
   );
 };
