@@ -23,17 +23,24 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  /* ---------- DESKTOP HANDLERS ---------- */
-  const openDesktopMenu = (setter) => {
-    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
-    setter(true);
-  };
+/* ---------- DESKTOP HANDLERS ---------- */
+const openServicesDesktop = () => {
+  if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+  setCompanyOpenDesktop(false); // CLOSE OTHER
+  setServicesOpenDesktop(true);
+};
 
-  const closeDesktopMenu = (setter) => {
-    closeTimeoutRef.current = setTimeout(() => {
-      setter(false);
-    }, 800);
-  };
+const openCompanyDesktop = () => {
+  if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+  setServicesOpenDesktop(false); // CLOSE OTHER
+  setCompanyOpenDesktop(true);
+};
+
+const closeDesktopMenu = (setter) => {
+  closeTimeoutRef.current = setTimeout(() => {
+    setter(false);
+  }, 500);
+};
 
   /* ---------- MOBILE HANDLERS ---------- */
   const closeMobileMenu = () => {
@@ -59,7 +66,7 @@ const Navbar = () => {
         {/* LOGO */}
         <NavLink
           to="/"
-          className="text-2xl  text-blue-500"
+          className="text-2xl font-semibold text-blue-500"
           onClick={closeMobileMenu}
         >
           SAAV.
@@ -79,7 +86,8 @@ const Navbar = () => {
   {/* SERVICES */}
   <li
     className="relative group"
-    onMouseEnter={() => openDesktopMenu(setServicesOpenDesktop)}
+onMouseEnter={openServicesDesktop}
+
     onMouseLeave={() => closeDesktopMenu(setServicesOpenDesktop)}
   >
     <NavLink to="/industries" className="text-red-600">
@@ -89,26 +97,40 @@ const Navbar = () => {
     <span className="absolute -bottom-1 left-0 h-[2px] bg-blue-600 w-0 group-hover:w-full transition-all duration-300" />
 
     {servicesOpenDesktop && (
-      <div
-        className="absolute left-0 mt-4 w-56 bg-[#020617]
-                   border border-white/10 rounded-md shadow-xl"
-        onMouseEnter={() => openDesktopMenu(setServicesOpenDesktop)}
-        onMouseLeave={() => closeDesktopMenu(setServicesOpenDesktop)}
-      >
-        <NavLink to="/industries" className="block px-5 py-3 text-white hover:bg-white/5">
-          Industries
-        </NavLink>
-        <NavLink to="/capabilities" className="block px-5 py-3 text-white hover:bg-white/5">
-          Capabilities
-        </NavLink>
-      </div>
-    )}
+  <div
+    className="
+      absolute top-full left-0 mt-3
+      w-56
+      rounded-xl
+      bg-[#020617]
+      border border-white/10
+      shadow-2xl
+    "
+    onMouseEnter={() => openDesktopMenu(setServicesOpenDesktop)}
+    onMouseLeave={() => closeDesktopMenu(setServicesOpenDesktop)}
+  >
+    <NavLink
+      to="/industries"
+      className="block px-5 py-3 text-slate-200 hover:bg-white/5"
+    >
+      Industries
+    </NavLink>
+    <NavLink
+      to="/capabilities"
+      className="block px-5 py-3 text-slate-200 hover:bg-white/5"
+    >
+      Capabilities
+    </NavLink>
+  </div>
+)}
+
   </li>
 
   {/* COMPANY */}
   <li
     className="relative group"
-    onMouseEnter={() => openDesktopMenu(setCompanyOpenDesktop)}
+   onMouseEnter={openCompanyDesktop}
+
     onMouseLeave={() => closeDesktopMenu(setCompanyOpenDesktop)}
   >
     <NavLink to="/ourcompany" className="text-red-600">
@@ -117,24 +139,40 @@ const Navbar = () => {
 
     <span className="absolute -bottom-1 left-0 h-[2px] bg-blue-600 w-0 group-hover:w-full transition-all duration-300" />
 
-    {companyOpenDesktop && (
-      <div
-        className="absolute left-0 mt-4 w-64 bg-[#020617]
-                   border border-white/10 rounded-md shadow-xl"
-        onMouseEnter={() => openDesktopMenu(setCompanyOpenDesktop)}
-        onMouseLeave={() => closeDesktopMenu(setCompanyOpenDesktop)}
-      >
-        <NavLink to="/ourcompany#mission" className="block text-white px-5 py-3 hover:bg-white/5">
-          Our Mission
-        </NavLink>
-        <NavLink to="/ourcompany#approach" className="block px-5 text-white py-3 hover:bg-white/5">
-          Our Approach
-        </NavLink>
-        <NavLink to="/ourcompany#why" className="block text-white px-5 py-3 hover:bg-white/5">
-          Why Choose SAAV
-        </NavLink>
-      </div>
-    )}
+   {companyOpenDesktop && (
+  <div
+    className="
+      absolute top-full left-0 mt-3
+      w-64
+      rounded-xl
+      bg-[#020617]
+      border border-white/10
+      shadow-2xl
+    "
+    onMouseEnter={() => openDesktopMenu(setCompanyOpenDesktop)}
+    onMouseLeave={() => closeDesktopMenu(setCompanyOpenDesktop)}
+  >
+    <NavLink
+      to="/ourcompany#mission"
+      className="block px-5 py-3 text-slate-200 hover:bg-white/5"
+    >
+      Our Mission
+    </NavLink>
+    <NavLink
+      to="/ourcompany#approach"
+      className="block px-5 py-3 text-slate-200 hover:bg-white/5"
+    >
+      Our Approach
+    </NavLink>
+    <NavLink
+      to="/ourcompany#why"
+      className="block px-5 py-3 text-slate-200 hover:bg-white/5"
+    >
+      Why Choose SAAV
+    </NavLink>
+  </div>
+)}
+
   </li>
 
   {/* CAREERS */}
@@ -158,7 +196,7 @@ const Navbar = () => {
 
         {/* MOBILE BUTTON */}
         <button
-          className="md:hidden text-blue-400  text-3xl"
+          className="md:hidden text-blue-500  text-3xl"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
@@ -178,7 +216,11 @@ const Navbar = () => {
       <div>
         <button
           className="w-full text-left font-medium"
-          onClick={() => setServicesOpenMobile(!servicesOpenMobile)}
+    onClick={() => {
+  setServicesOpenMobile(!servicesOpenMobile);
+  setCompanyOpenMobile(false); // CLOSE OTHER
+}}
+
         >
           Services
         </button>
@@ -199,7 +241,11 @@ const Navbar = () => {
       <div>
         <button
           className="w-full text-left font-medium"
-          onClick={() => setCompanyOpenMobile(!companyOpenMobile)}
+          onClick={() => {
+  setCompanyOpenMobile(!companyOpenMobile);
+  setServicesOpenMobile(false); // CLOSE OTHER
+}}
+
         >
           Company
         </button>
