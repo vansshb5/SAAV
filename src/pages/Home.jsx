@@ -24,7 +24,7 @@ const Home = () => {
           </h1>
 
           <p className="text-xl text-slate-600 leading-relaxed">
-            SAAV. is an IT and AI-focused technology company working across cloud,
+            SAAV is an IT and AI-focused technology company working across cloud,
             data, artificial intelligence, and enterprise software. We build
             intelligent systems and create opportunities for people to work on
             real-world technology projects.
@@ -151,7 +151,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white border border-slate-200 rounded-xl p-10 text-center">
             <h3 className="text-2xl font-medium mb-3">
-              Get Started with SAAV.
+              Get Started with SAAV
             </h3>
             <p className="text-slate-600 mb-6">
               Whether you’re interested in technology solutions or opportunities

@@ -10,7 +10,7 @@ const OurCompany = () => {
       <section className="relative pt-32 pb-24">
         <img
           src={heroImg}
-          alt="SAAV. Consulting"
+          alt="SAAV Consulting"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/60" />
@@ -20,7 +20,7 @@ const OurCompany = () => {
             Our Company
           </h1>
           <p className="text-lg text-slate-200 max-w-3xl leading-relaxed">
-            SAAV. Consulting is a technology consulting firm committed to helping
+            SAAV Consulting is a technology consulting firm committed to helping
             organizations modernize, innovate, and grow through thoughtful use
             of IT, data, cloud, and artificial intelligence.
           </p>

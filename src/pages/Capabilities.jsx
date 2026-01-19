@@ -75,7 +75,7 @@ const Capabilities = () => {
             Our Capabilities
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
-            SAAV. Consulting delivers end-to-end technology capabilities across
+            SAAV Consulting delivers end-to-end technology capabilities across
             strategy, cloud, data, and artificial intelligence to support
             business transformation and long-term growth.
           </p>

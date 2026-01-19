@@ -16,7 +16,7 @@ const Careers = () => {
 
         <div className="relative max-w-5xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-semibold mb-4">
-            Careers at SAAV. Consulting
+            Careers at SAAV Consulting
           </h1>
           <p className="text-lg text-slate-300 max-w-3xl leading-relaxed">
             Join a technology consulting firm focused on delivering thoughtful,
@@ -33,10 +33,10 @@ const Careers = () => {
           <div className="bg-white border border-slate-200 rounded-xl p-10 md:p-14 mb-20 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-medium mb-6">
-                Why Build Your Career at SAAV.
+                Why Build Your Career at SAAV
               </h2>
               <p className="text-slate-600 leading-relaxed mb-6">
-                At SAAV. Consulting, our people are central to how we work.
+                At SAAV Consulting, our people are central to how we work.
                 We provide an environment where professionals can develop
                 practical skills, contribute to meaningful projects, and grow
                 alongside experienced consultants and engineers.

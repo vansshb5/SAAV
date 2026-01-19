@@ -17,7 +17,7 @@ const About = () => {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <img
           src={heroImg}
-          alt="About SAAV. Consulting"
+          alt="About SAAV Consulting"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/70" />
@@ -28,10 +28,10 @@ const About = () => {
           `}
         >
           <h1 className="text-4xl md:text-5xl font-semibold text-white mb-6">
-            About SAAV. Consulting
+            About SAAV Consulting
           </h1>
           <p className="text-lg text-slate-200 max-w-3xl leading-relaxed">
-            SAAV. Consulting is a technology consulting firm focused on enabling
+            SAAV Consulting is a technology consulting firm focused on enabling
             organizations to modernize, innovate, and grow through IT, data,
             cloud, and artificial intelligence solutions.
           </p>
@@ -70,7 +70,7 @@ const About = () => {
           {/* WHY SAAV */}
           <div className="bg-white border border-slate-200 rounded-xl p-12">
             <h2 className="text-3xl font-medium mb-10">
-              Why Choose SAAV. Consulting
+              Why Choose SAAV Consulting
             </h2>
 
             <div className="grid md:grid-cols-3 gap-10 text-slate-600">
