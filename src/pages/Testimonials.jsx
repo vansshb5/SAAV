@@ -6,21 +6,21 @@ const testimonials = [
     name: "Robin Matthews-Kanhai",
     role: "Director, Operations and Strategic Support",
     quote:
-      "Working with SAAV has been excellent. Their communication, focus, and quality of work exceeded my expectations. They provide insightful, goal-aligned solutions and a valuable external perspective, adding long-term value to our organization.",
+      "Working with SAAV. has been excellent. Their communication, focus, and quality of work exceeded my expectations. They provide insightful, goal-aligned solutions and a valuable external perspective, adding long-term value to our organization.",
   },
   {
     company: "Confidential Energy Client",
     name: "Senior Program Manager",
     role: "Infrastructure & Energy Programs",
     quote:
-      "The SAAV team demonstrated strong technical depth and an exceptional willingness to learn. Their structured approach and attention to detail translated into reliable delivery across complex, regulated environments.",
+      "The SAAV. team demonstrated strong technical depth and an exceptional willingness to learn. Their structured approach and attention to detail translated into reliable delivery across complex, regulated environments.",
   },
   {
     company: "Industrial Infrastructure Client",
     name: "Head of Engineering",
     role: "Capital Projects",
     quote:
-      "SAAV brought clarity and discipline to a highly complex program. Their ability to align engineering execution with business objectives made them a trusted partner throughout the project lifecycle.",
+      "SAAV. brought clarity and discipline to a highly complex program. Their ability to align engineering execution with business objectives made them a trusted partner throughout the project lifecycle.",
   },
 ];
 

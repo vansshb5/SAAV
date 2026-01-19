@@ -1,50 +1,51 @@
 import { useState } from "react";
 
-import aiImg from "../assets/industries/ai.png";
-import cloudImg from "../assets/industries/cloud.png";
-import dataImg from "../assets/industries/data.png";
-import softwareImg from "../assets/industries/software.png";
-import securityImg from "../assets/industries/security.png";
-import publicImg from "../assets/industries/public.png";
+import fintechImg from "../assets/industries/fintech.png";
+import healthImg from "../assets/industries/health.png";
+import retailImg from "../assets/industries/retail.png";
+import utilitiesImg from "../assets/industries/utilities.png";
+import govImg from "../assets/industries/public.png";
+import saasImg from "../assets/industries/software.png";
 
 const industries = [
   {
-    title: "Artificial Intelligence & Machine Learning",
+    title: "FinTech & Digital Banking",
     description:
-      "Development and deployment of AI and machine learning systems, including data pipelines, model integration, and AI-enabled applications used across enterprise and digital platforms.",
-    image: aiImg,
+      "Technology platforms supporting digital payments, banking systems, risk and compliance platforms, and AI-driven financial services. Our work focuses on secure, scalable, and cloud-native financial technology environments.",
+    image: fintechImg,
   },
   {
-    title: "Cloud Computing & IT Infrastructure",
+    title: "Healthcare & HealthTech",
     description:
-      "Enterprise IT infrastructure and cloud platforms supporting scalable applications, secure environments, and high-availability systems.",
-    image: cloudImg,
+      "IT systems and data platforms supporting healthcare delivery, patient data management, analytics, and compliance-driven digital solutions across healthcare organizations.",
+    image: healthImg,
   },
   {
-    title: "Data Engineering & Analytics",
+    title: "Retail, E-commerce & Digital Commerce",
     description:
-      "Data platforms and analytics systems that enable data processing, reporting, and intelligent insights across structured and real-time environments.",
-    image: dataImg,
+      "Digital platforms enabling e-commerce, customer analytics, personalization, and backend integrations supporting modern retail and digital commerce ecosystems.",
+    image: retailImg,
   },
   {
-    title: "Software Development & Enterprise Applications",
+    title: "Utilities & Smart Infrastructure",
     description:
-      "Design and development of enterprise software, web applications, APIs, and integrations supporting business workflows.",
-    image: softwareImg,
+      "IT platforms supporting utilities and infrastructure organizations, including monitoring systems, analytics platforms, and secure enterprise IT environments.",
+    image: utilitiesImg,
   },
   {
-    title: "Cybersecurity & IT Operations",
+    title: "Public Sector & GovTech",
     description:
-      "Secure IT environments supported by monitoring, access control, and operational platforms protecting enterprise systems and data.",
-    image: securityImg,
+      "Large-scale digital platforms and IT systems for public sector and regulated environments, with a focus on security, compliance, and service delivery.",
+    image: govImg,
   },
   {
-    title: "Public Sector & Regulated IT Environments",
+    title: "Technology, SaaS & Digital Platforms",
     description:
-      "IT systems designed for regulated organizations, focusing on compliance, security, and large-scale digital services.",
-    image: publicImg,
+      "Technology companies building SaaS products, internal platforms, and scalable digital services using cloud-native, data-driven, and AI-enabled architectures.",
+    image: saasImg,
   },
 ];
+
 
 const Industries = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -60,7 +61,7 @@ const Industries = () => {
             Industries & Technology Domains
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
-            SAAV works across AI and IT-driven domains, delivering technology
+            SAAV. works across AI and IT-driven domains, delivering technology
             solutions in areas such as artificial intelligence, cloud platforms,
             data engineering, and enterprise systems.
           </p>

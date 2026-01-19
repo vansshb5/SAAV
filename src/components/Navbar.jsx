@@ -168,7 +168,7 @@ onMouseEnter={openServicesDesktop}
       to="/ourcompany#why"
       className="block px-5 py-3 text-slate-200 hover:bg-white/5"
     >
-      Why Choose SAAV
+      Why Choose SAAV.
     </NavLink>
   </div>
 )}
@@ -259,7 +259,7 @@ onMouseEnter={openServicesDesktop}
               Our Approach
             </NavLink>
             <NavLink to="/ourcompany#why" onClick={closeMobileMenu}>
-              Why Choose SAAV
+              Why Choose SAAV.
             </NavLink>
           </div>
         )}

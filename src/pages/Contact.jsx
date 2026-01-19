@@ -9,7 +9,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
-            Get in touch with SAAV Consulting to discuss technology solutions,
+            Get in touch with SAAV. Consulting to discuss technology solutions,
             consulting engagements, or career opportunities. Our team will
             respond promptly.
           </p>
@@ -98,7 +98,7 @@ const Contact = () => {
             </ul>
 
             <p className="mt-8 text-slate-600 leading-relaxed">
-              SAAV Consulting works with organizations globally through a
+              SAAV. Consulting works with organizations globally through a
               flexible engagement model, supporting both remote collaboration
               and on-site delivery when required.
             </p>

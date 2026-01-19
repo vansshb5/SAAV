@@ -2,6 +2,7 @@ import infraImg from "../assets/capabilities/infrastructure.png";
 import cloudImg from "../assets/capabilities/cloud.png";
 import dataImg from "../assets/capabilities/data.png";
 import aiImg from "../assets/capabilities/ai.png";
+import pmImg from "../assets/capabilities/project-management.png";
 
 const capabilityGroups = [
   {
@@ -48,6 +49,19 @@ const capabilityGroups = [
       "Intelligent automation & predictive analytics",
     ],
   },
+  {
+  title: "Project Management & Delivery",
+  description:
+    "Structured project and program management services ensuring IT and AI initiatives are planned, governed, and delivered successfully across teams and stakeholders.",
+  image: pmImg,
+  items: [
+    "Project & Program Management",
+    "Delivery Governance & Reporting",
+    "Stakeholder & Risk Management",
+    "Agile & Hybrid Delivery Models",
+  ],
+},
+
 ];
 
 const Capabilities = () => {
@@ -61,7 +75,7 @@ const Capabilities = () => {
             Our Capabilities
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
-            SAAV Consulting delivers end-to-end technology capabilities across
+            SAAV. Consulting delivers end-to-end technology capabilities across
             strategy, cloud, data, and artificial intelligence to support
             business transformation and long-term growth.
           </p>

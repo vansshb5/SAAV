@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroSlider from "../components/HeroSlider";
-
+import whatProject  from "../assets/home/what-project.png";
 import whatAI from "../assets/home/what-ai.png";
 import whatCloud from "../assets/home/what-cloud.png";
 import whatData from "../assets/home/what-data.png";
@@ -24,7 +24,7 @@ const Home = () => {
           </h1>
 
           <p className="text-xl text-slate-600 leading-relaxed">
-            SAAV is an IT and AI-focused technology company working across cloud,
+            SAAV. is an IT and AI-focused technology company working across cloud,
             data, artificial intelligence, and enterprise software. We build
             intelligent systems and create opportunities for people to work on
             real-world technology projects.
@@ -38,50 +38,54 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-semibold mb-14 max-w-3xl">
             What We Do
           </h2>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                img: whatAI,
-                title: "AI & Intelligent Systems",
-                desc:
-                  "We design and implement artificial intelligence and machine learning systems that integrate into applications and workflows.",
-              },
-              {
-                img: whatCloud,
-                title: "Cloud & IT Platforms",
-                desc:
-                  "We build scalable cloud-based and enterprise IT platforms supporting secure digital operations.",
-              },
-              {
-                img: whatData,
-                title: "Data & Software Systems",
-                desc:
-                  "We develop data platforms and software systems enabling analytics, automation, and digital services.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-white border border-slate-200 rounded-xl overflow-hidden transition hover:shadow-lg"
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="h-44 w-full object-cover"
-                />
-                <div className="p-8">
-                  <h3 className="text-xl font-medium mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+  {[
+    {
+      img: whatAI,
+      title: "AI & Intelligent Systems",
+      desc:
+        "We design and implement artificial intelligence and machine learning systems that integrate into applications and workflows.",
+    },
+    {
+      img: whatCloud,
+      title: "Cloud & IT Platforms",
+      desc:
+        "We build scalable cloud-based and enterprise IT platforms supporting secure digital operations.",
+    },
+    {
+      img: whatData,
+      title: "Data & Software Systems",
+      desc:
+        "We develop data platforms and software systems enabling analytics, automation, and digital services.",
+    },
+    {
+      img: whatProject,
+      title: "Project Management Services",
+      desc:
+        "We provide structured project and program management services to ensure IT and AI initiatives are planned, governed, and delivered successfully.",
+    },
+  ].map((item) => (
+    <div
+      key={item.title}
+      className="bg-white border border-slate-200 rounded-xl overflow-hidden transition hover:shadow-lg"
+    >
+      <img
+        src={item.img}
+        alt={item.title}
+        className="h-44 w-full object-cover"
+      />
+      <div className="p-8">
+        <h3 className="text-xl font-medium mb-3">
+          {item.title}
+        </h3>
+        <p className="text-slate-600 leading-relaxed">
+          {item.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div> </div>
+</section>
 
       {/* INDUSTRIES & CAPABILITIES */}
       <section className="py-24 bg-slate-50">
@@ -147,7 +151,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white border border-slate-200 rounded-xl p-10 text-center">
             <h3 className="text-2xl font-medium mb-3">
-              Get Started with SAAV
+              Get Started with SAAV.
             </h3>
             <p className="text-slate-600 mb-6">
               Whether you’re interested in technology solutions or opportunities

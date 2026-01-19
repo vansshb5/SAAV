@@ -6,7 +6,7 @@ const Footer = () => {
         {/* BRAND */}
         <div className="md:col-span-2">
           <h2 className="text-xl font-semibold text-white tracking-wide">
-            SAAV
+            SAAV.
           </h2>
           <p className="mt-4 max-w-md text-sm leading-relaxed">
             We help businesses transform through modern technology,
@@ -20,11 +20,7 @@ const Footer = () => {
             Company
           </h3>
           <ul className="space-y-3 text-sm">
-            <li>
-              <a href="/about" className="hover:text-white transition">
-                About Us
-              </a>
-            </li>
+            
             <li>
               <a href="/ourcompany" className="hover:text-white transition">
                 Our Company
