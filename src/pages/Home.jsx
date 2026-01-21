@@ -128,7 +128,7 @@ const Home = () => {
       <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-5">
+            <h2 className="text-3xl md:text-3.5xl font-semibold mb-5">
               Opportunities for People in IT & AI
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed">

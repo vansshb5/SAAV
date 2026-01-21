@@ -87,12 +87,11 @@ const Contact = () => {
 
             <ul className="space-y-4 text-slate-600">
               <li>
-                <strong>Email:</strong> contact@saavconsulting.com
+                <strong>Email:</strong> projects@saavconsulting.ca
               </li>
               <li>
-                <strong>Careers:</strong> careers@saavconsulting.com
-              </li>
-              <li>
+            
+            
                 <strong>Working Model:</strong> Remote & Client Locations
               </li>
             </ul>

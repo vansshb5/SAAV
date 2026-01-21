@@ -61,7 +61,7 @@ const Industries = () => {
             Industries & Technology Domains
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
-            SAAV. works across AI and IT-driven domains, delivering technology
+            SAAV works across AI and IT-driven domains, delivering technology
             solutions in areas such as artificial intelligence, cloud platforms,
             data engineering, and enterprise systems.
           </p>

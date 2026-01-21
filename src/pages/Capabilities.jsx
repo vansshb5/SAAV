@@ -50,18 +50,17 @@ const capabilityGroups = [
     ],
   },
   {
-  title: "Project Management & Delivery",
-  description:
-    "Structured project and program management services ensuring IT and AI initiatives are planned, governed, and delivered successfully across teams and stakeholders.",
-  image: pmImg,
-  items: [
-    "Project & Program Management",
-    "Delivery Governance & Reporting",
-    "Stakeholder & Risk Management",
-    "Agile & Hybrid Delivery Models",
-  ],
-},
-
+    title: "Project Management & Delivery",
+    description:
+      "Structured project and program management services ensuring IT and AI initiatives are planned, governed, and delivered successfully.",
+    image: pmImg,
+    items: [
+      "Project & Program Management",
+      "Delivery governance & reporting",
+      "Stakeholder & risk management",
+      "Agile & hybrid delivery models",
+    ],
+  },
 ];
 
 const Capabilities = () => {
@@ -76,63 +75,69 @@ const Capabilities = () => {
           </h1>
           <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
             SAAV Consulting delivers end-to-end technology capabilities across
-            strategy, cloud, data, and artificial intelligence to support
-            business transformation and long-term growth.
+            strategy, cloud, data, artificial intelligence, and delivery to
+            support business transformation and long-term growth.
           </p>
         </div>
       </section>
 
       {/* CAPABILITIES GRID */}
-      <section className="pb-32">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section className="pb-32">
+  <div
+    className="
+      max-w-7xl mx-auto px-6
+      flex flex-wrap justify-center
+      gap-10
+    "
+  >
+    {capabilityGroups.map((group) => (
+      <div
+        key={group.title}
+        className="
+          w-full max-w-md
+          bg-white border border-slate-200 rounded-xl overflow-hidden
+          transition-all duration-300
+          hover:shadow-lg hover:-translate-y-1
+        "
+      >
+        {/* IMAGE */}
+        <img
+          src={group.image}
+          alt={group.title}
+          className="w-full h-40 object-cover"
+        />
 
-          {capabilityGroups.map((group) => (
-            <div
-              key={group.title}
-              className="
-                bg-white border border-slate-200 rounded-xl overflow-hidden
-                transition-all duration-300
-                hover:shadow-lg hover:-translate-y-1
-              "
-            >
-              {/* IMAGE */}
-              <img
-                src={group.image}
-                alt={group.title}
-                className="w-full h-40 object-cover"
-              />
+        {/* CONTENT */}
+        <div className="p-6">
+          <h2 className="text-xl font-medium mb-3">
+            {group.title}
+          </h2>
 
-              {/* CONTENT */}
-              <div className="p-6">
-                <h2 className="text-xl font-medium mb-3">
-                  {group.title}
-                </h2>
+          <p className="text-slate-600 mb-4 leading-relaxed">
+            {group.description}
+          </p>
 
-                <p className="text-slate-600 mb-4 leading-relaxed">
-                  {group.description}
-                </p>
-
-                <ul className="space-y-3">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="
-                        pl-4 border-l-2 border-slate-300
-                        text-slate-600 text-sm
-                        transition-all duration-300
-                        hover:border-blue-600 hover:text-slate-800
-                      "
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-
+          <ul className="space-y-3">
+            {group.items.map((item) => (
+              <li
+                key={item}
+                className="
+                  pl-4 border-l-2 border-slate-300
+                  text-slate-600 text-sm
+                  transition-all duration-300
+                  hover:border-blue-600 hover:text-slate-800
+                "
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
 
     </main>
   );
